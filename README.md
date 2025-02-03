@@ -8,6 +8,62 @@ Proyek ini adalah tugas teknikal test untuk mengikuti bootcamp techno center ber
 - User Register
 - JWT
 
+## Endpoint 
+
+- /api/mobil
+```agsl
+Method: GET
+Deskripsi: Mengambil semua mobil yang ada dalam database.
+```
+- /api/mobil/search
+```agsl
+Method: GET
+Query Parameter: name (String)
+Deskripsi: Mencari mobil berdasarkan nama yang mengandung teks tertentu.
+```
+- /api/mobil/type/{tipeMobil}
+```agsl
+Method: GET
+Path Variable: tipeMobil (String)
+Deskripsi: Mencari mobil berdasarkan tipe mobil.
+```
+
+- /api/mobil/type
+```agsl
+Method: GET
+Deskripsi: Mengambil semua nama tipe mobil yang ada dalam database.
+```
+
+- /api/mobil
+```agsl
+Method: POST
+Body : {
+    "nama":"Mobil Jelek",
+    "harga":1000000,
+    "tipe":"Sedan"
+}
+Deskripsi: Menambahkan mobil baru ke dalam database.
+```
+
+- /api/mobil/{id}
+```agsl
+Method: PUT
+Path Variable: id (Integer)
+Body : {
+    "nama":"Mobil Biasa",
+    "harga":1000000,
+    "tipe":"Crossover"
+}
+Deskripsi: Memperbarui data mobil berdasarkan ID.
+```
+
+- /api/mobil/{id}
+```agsl
+Method: DELETE
+Path Variable: id (Integer)
+Deskripsi: Menghapus mobil berdasarkan ID.
+```
+
 ## Struktur Proyek
 
 - `Mobil`: Entitas yang merepresentasikan mobil.
