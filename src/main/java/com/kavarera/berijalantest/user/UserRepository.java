@@ -1,6 +1,5 @@
-package com.kavarera.berijalantest.repositories;
+package com.kavarera.berijalantest.user;
 
-import com.kavarera.berijalantest.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

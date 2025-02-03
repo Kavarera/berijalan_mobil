@@ -2,8 +2,8 @@ package com.kavarera.berijalantest.auth;
 
 
 import com.kavarera.berijalantest.config.JwtService;
-import com.kavarera.berijalantest.models.User;
-import com.kavarera.berijalantest.repositories.UserRepository;
+import com.kavarera.berijalantest.user.User;
+import com.kavarera.berijalantest.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

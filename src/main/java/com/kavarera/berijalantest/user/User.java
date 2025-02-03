@@ -1,4 +1,4 @@
-package com.kavarera.berijalantest.models;
+package com.kavarera.berijalantest.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -21,8 +21,12 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private short id;
+
+    @Column(nullable = false)
     private String username;
+    @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
     private String fullname;
 
     @Override
