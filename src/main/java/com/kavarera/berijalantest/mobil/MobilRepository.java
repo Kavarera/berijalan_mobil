@@ -8,6 +8,7 @@ import java.util.List;
 @Repository
 public interface MobilRepository extends JpaRepository<Mobil,Integer> {
     List<Mobil> findByNamaContaining(String name);
+    List<Mobil> findByTipe(MobilEnum tipe);
 
 
 }

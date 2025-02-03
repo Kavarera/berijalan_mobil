@@ -26,9 +26,9 @@ public class Mobil {
     private String nama;
     @Column(nullable = false)
     private BigDecimal harga;
-
-    @Column(name = "gambar_path", nullable = false)
-    private String gambarPath;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private MobilEnum tipe;
 
     @LastModifiedDate
     @Column(insertable = false)

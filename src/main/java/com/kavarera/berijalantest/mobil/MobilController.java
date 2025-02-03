@@ -21,6 +21,19 @@ public class MobilController {
         return ResponseEntity.ok(datas);
     }
 
+    @GetMapping("/type/{tipemobil}")
+    public ResponseEntity<List<Mobil>> getMobilByTipe(
+            @PathVariable MobilEnum tipemobil){
+        List<Mobil> datas = mobilService.findByTipe(tipemobil);
+        return ResponseEntity.ok(datas);
+    }
+
+    @GetMapping("/type")
+    public ResponseEntity<List<String>> getAllMobilType(){
+        List<String> datas = mobilService.findAllTipeMobil();
+        return ResponseEntity.ok(datas);
+    }
+
     @GetMapping("/search")
     public ResponseEntity<List<Mobil>> getMobilByContainingName(
             @RequestParam String name
@@ -43,6 +56,7 @@ public class MobilController {
                 .orElseThrow(()->new IllegalArgumentException("Id("+id+") not found"));
          data.setNama(mobil.getNama());
          data.setHarga(mobil.getHarga());
+         data.setTipe(mobil.getTipe());
          return ResponseEntity.ok(mobilService.save(data));
     }
 
